@@ -112,7 +112,7 @@ class Frontend_File_Upload_Public
 		$output = '<form method="post" enctype="multipart/form-data">';
 		$output .= ' <h4>Enter Details and Upload File</h4><br>';
 		$output .= ' <div class="ffu-input-details">';
-		$output .= '     <label>Enter User Name</label>';
+		$output .= '     <label>Enter Andrew ID</label>';
 		$output .= '     <input type="text" id="ffu-user-name" name="ffu_user_name" class="ffu_user_name" required/> <br>';
 		$output .= ' </div>';
 		$output .= ' <div class="ffu-input-details">';
