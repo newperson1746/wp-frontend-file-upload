@@ -116,7 +116,7 @@ class Frontend_File_Upload_Public
 		$output .= '     <input type="text" id="ffu-user-name" name="ffu_user_name" class="ffu_user_name" required/> <br>';
 		$output .= ' </div>';
 		$output .= ' <div class="ffu-input-details">';
-		$output .= '     <input type="file" name="fileToUpload[]" id="fileToUpload" accept="application/msword, application/vnd.openxmlformats-officedocument.wordprocessingm, application/pdf" multiple/><br>';
+		$output .= '     <input type="file" name="fileToUpload[]" id="fileToUpload" multiple/><br>';
 		$output .= ' </div>';
 		$output .= ' <div class="ffu-input-details">';
 		$output .= '     <input type="submit" name="submit" id="ffu-submit" value="Upload File" name="submit" />';
