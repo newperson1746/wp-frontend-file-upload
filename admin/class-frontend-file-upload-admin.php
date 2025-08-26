@@ -128,7 +128,7 @@ class Frontend_File_Upload_Admin
 		global $wpdb;
 		$res = $wpdb->get_results("select p1.post_content, p1.post_name, p1.post_mime_type, p1.guid
             FROM {$wpdb->posts} p1
-            WHERE p1.post_type LIKE 'attachment' AND p1.post_mime_type LIKE 'application/msword' OR p1.post_mime_type LIKE  'application/vnd.openxmlformats-officedocument.wordprocessingm' OR p1.post_mime_type LIKE 'application/pdf' OR p1.post_mime_type LIKE 'text/plain'
+            WHERE p1.post_type LIKE 'attachment'
         ");
 
 		$path = wp_upload_dir()['path'];
@@ -140,13 +140,16 @@ class Frontend_File_Upload_Admin
 		echo '<table class="fb_table">';
 		echo '  <head>';
 		echo '      <th>';
-		echo '          User Name';
+		echo '          Username';
 		echo '      </th>';
 		echo '      <th>';
-		echo '          File Name';
+		echo '          Filename';
 		echo '      </th>';
+        echo '      <th>';
+        echo '          mime-type';
+        echo '      </th>';
 		echo '      <th>';
-		echo '          Download File';
+		echo '          Downloadfile';
 		echo '      </th>';
 		echo '      <th>';
 		echo '          Select';
@@ -160,6 +163,7 @@ class Frontend_File_Upload_Admin
 			echo '<tr>';
 			echo '  <td>' . esc_html($value['post_content']) . '</td>';
 			echo '  <td>' . esc_html($value['post_name']) . '</td>';
+			echo '  <td>' . esc_html($value['post_mime_type']) . '</td>';
 			echo '  <td><a href="' . esc_html($value['guid']) . '" target="_blank"><button>Download</button></a></td>';
 			echo '  <td><input type="checkbox" name="ffu_files" value="' . esc_html($value["post_name"]) . '" /></td>';
 			echo '</tr>';
